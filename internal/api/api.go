@@ -20,17 +20,17 @@ import (
 
 type apiHandler struct {
 	q           *pgstore.Queries
-	r           *chi.Mux
+	r           *chi.Mux // vou passar essa chamada para meu handler no meu apihandler
 	upgrader    websocket.Upgrader
 	subscribers map[string]map[*websocket.Conn]context.CancelFunc
 	mu          *sync.Mutex
 }
 
 func (h apiHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	h.r.ServeHTTP(w, r)
+	h.r.ServeHTTP(w, r) 
 }
 
-func NewHandler(q *pgstore.Queries) http.Handler {
+func NewHandler(q *pgstore.Queries) http.Handler { // tipagem que consegue receber uma http reqiest
 	a := apiHandler{
 		q:           q,
 		upgrader:    websocket.Upgrader{CheckOrigin: func(r *http.Request) bool { return true }},
