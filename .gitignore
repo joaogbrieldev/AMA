@@ -1,0 +1,68 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Directories
+_/ # Go workspace root
+vendor/
+
+# Dependency directories (remove the comment below if you use them)
+# Godep
+Godeps/
+
+# Go workspace file
+go.work
+go.work.sum
+
+# IDE/Editor directories and files
+.vscode/
+.idea/
+*.swp
+*~
+*.sublime-project
+*.sublime-workspace
+
+# IDE specific folders
+/.idea
+/.vscode
+*.tmproj
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Configuration files
+.env
+
+# By default, no need to check into git Go modules.
+go.sum
+
+# Build artifacts
+*.exe
+*.out
+*.test
+*.o
+*.a
+*.lo
+*.la
+*.lai
+*.dll
+*.dylib
+*.so
+
+# Coverage files
+*.cover
+
+# Test binary, default name used by "go test -c"
+*.test
